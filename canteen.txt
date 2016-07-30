@@ -1,0 +1,71 @@
+﻿cơ sở dữ liệu
+tk sql express 2005: sa/sa@123
+
+
+
+1. Bảng trong HSM: 
+
+- Bảng: danh mục người dùng (dmuser)
+iduser: id user
+username: tên đăng nhập
+pass: mật khẩu
+họ và tên,
+phân quyền
+
+- Bảng: danh mục phân quyền 
+(user name dc vào những phần gì)
+
+- Bảng: danh mục nhóm sản phẩm (dmnhomsp)
+idnhomsp: id nhóm sản phẩm (numeric 10,0)
+stt: số thứ tự (numeric 5,0)
+manhomsp:mã sản phẩm (nvarchar(20))
+tennhomsp:tên nhóm sản phẩm  (text)
+ghichu: ghi chú) (text)
+
+- Bảng: danh mục sản phẩm (dmsp)
+idsp: id sản phẩm (numeric 7,0)
+stt: số thứ tự (numeric 5,0)
+masp: mã sản phẩm (nvarchar(20))
+tensp:tên sản phẩm (text)
+donvi: đơn vị tính, (nvarchar(20))
+gianhap:giá nhập (numeric 10,0)
+giaban:giá bán (numeric 10,0)
+idnhomsp: id nhóm sản phẩm, (numeric 10,0)
+ghichu: ghi chú) (text)
+barcode: mã barcode 
+
+- Bảng: nhập hàng (nhaphang) * áp dụng bán tạp hóa bệnh viện
+stt,
+idnhaphang, 
+barcode,
+tên sản phẩm, 
+đơn vị tính, 
+nhóm sản phẩm, 
+ngày nhập hàng
+người nhập hàng
+
+
+
+- Bảng: Hóa đơn (hoadon)
+idhoadon:	id hóa đơn (numeric 10,0: 160721+ stt bill)
+sohoadon: số hóa đơn, (character varying 10:BIL0001)
+ngaythu: ngày thu (timestamp without time zone: 2016-07-21 19:00:09)
+tenkhachhang:tên khách hàng (text)
+diachi: địa chỉ (text)
+tongtien: tổng tiền (numeric 20,0)
+username: người thu (character varying 30)
+computer: tên máy tính người thu *  (character varying 50)
+sttphat: số thứ tự phát cơm (numeric 4,0: 0001 sang 1 ngày mới reset về 1)
+
+- Bảng: Hóa đơn chi tiết (hoadonct)
+idhoadon: id hóa đơn (numeric 10,0: 160721+ stt bill)
+stt: số thứ tự (numeric 5,0)
+idsp: id sản phẩm (numeric 10,0)
+soluong: số lượng (numeric 10,0)
+giaban: giá bán (numeric 20,0)
+ck: chiết khấu
+thanhtien: thành tiền (numeric 20,0)
+ghichu: ghi chú (text)
+
+)
+
